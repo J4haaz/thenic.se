@@ -8,74 +8,98 @@ html, body {
 }
 
 
+/* Hero Section */
 .hero-section {
   height: 100vh; 
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0D6CAC; 
+  background-color: #0D6CAC;
   background-image: url('/assets/images/hero-backdrop.png');
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  background-position: center; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
   color: white;
-  margin: auto;
+  margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
 .hero-content {
-  max-width: 900px; 
+  max-width: 900px;
   padding: 0 20px;
 }
 
 .hero-small-text {
-  font-size: 2rem; 
-  color: #f1c40f; 
-  margin-bottom: 15px; 
-  font-family: 'Tajawal', sans-serif; 
+  font-size: 2rem;
+  color: #f1c40f;
+  margin-bottom: 15px;
+  font-family: 'Tajawal', sans-serif;
 }
 
 .hero-main-text {
-  font-size: 4rem; 
+  font-size: 4rem;
   font-weight: bold;
-  color: #f1c40f; 
+  color: #f1c40f;
   margin-bottom: 15px;
-  font-family: 'Tajawal', sans-serif; 
+  font-family: 'Tajawal', sans-serif;
 }
 
 .hero-subtitle {
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
   font-weight: 600;
   color: white;
   margin-bottom: 20px;
 }
 
 .hero-description {
-  font-size: 1.3rem; 
-  line-height: 1.8; 
-  color: #d6e4f0; 
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #d6e4f0;
 }
 
-
+/* Responsive Design for Hero Section */
 @media (max-width: 768px) {
   .hero-section {
     height: auto;
-    padding: 20px;
+    padding: 40px 20px; /* Add padding for smaller screens */
   }
 
   .hero-content {
-    max-width: 100%; 
-    padding: 10px;
+    max-width: 100%; /* Ensure content spans properly */
   }
 
   .hero-small-text {
-    font-size: 1.5rem; 
+    font-size: 1.8rem; /* Slightly reduce text size */
   }
 
   .hero-main-text {
-    font-size: 2.5rem; 
+    font-size: 3rem; /* Adjust size to maintain proportion */
+  }
+
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: auto;
+    padding: 30px 15px; /* Further reduce padding for small screens */
+  }
+
+  .hero-small-text {
+    font-size: 1.5rem;
+  }
+
+  .hero-main-text {
+    font-size: 2.5rem;
   }
 
   .hero-subtitle {
@@ -83,25 +107,25 @@ html, body {
   }
 
   .hero-description {
-    font-size: 1rem; 
-    line-height: 1.5;
+    font-size: 0.9rem;
   }
 }
 
-@media (max-width: 480px) {
-  .hero-small-text {
-    font-size: 1.2rem; 
-  }
+/* Header Menu Fix */
+.menu-toggle {
+  display: none;
+}
 
-  .hero-main-text {
-    font-size: 2rem; 
-  }
-
-  .hero-subtitle {
-    font-size: 1.5rem; 
-  }
-
-  .hero-description {
-    font-size: 0.9rem; 
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
   }
 }

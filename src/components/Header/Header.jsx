@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className="header">
       <div className="header-container">
-        <img src="/assets/images/logo.png" alt="" className="logo" />
-        <nav className="nav-bar">
+        <img src="/assets/images/logo.png" alt="Logo" className="logo" />
+        <button className="menu-toggle" onClick={toggleMenu}>
+          ☰
+        </button>
+        <nav className={`nav-bar ${menuOpen ? 'active' : ''}`}>
           <ul className="nav-list">
             <li><a href="#home" className="nav-item active">Home</a></li>
             <li><a href="#about" className="nav-item">About NIC</a></li>
@@ -15,14 +24,12 @@ const Header = () => {
             <li><a href="#team" className="nav-item">Team</a></li>
             <li><a href="#contact" className="nav-item">Contact Us</a></li>
           </ul>
-        </nav>
-        <div className="header-actions">
           <button className="support-button">SUPPORT</button>
-          <div className="social-icons">
-            <a href="#" className="social-icon fab fa-facebook-f"></a>
-            <a href="#" className="social-icon fab fa-instagram"></a>
-            <a href="#" className="social-icon fab fa-youtube"></a>
-          </div>
+        </nav>
+        <div className="social-icons">
+          <a href="#" className="social-icon fab fa-facebook-f"></a>
+          <a href="#" className="social-icon fab fa-instagram"></a>
+          <a href="#" className="social-icon fab fa-youtube"></a>
         </div>
       </div>
     </header>
