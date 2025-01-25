@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+.mission-section {
+    background-color: #0D6CAC;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 40px;
+    gap: 30px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .mission-text {
+    width: 50%;
+  }
+  
+  .mission-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  
+  .mission-content {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+  
+  .mission-highlight {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+  
+  .mission-donate {
+    color: #ffd700;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration: underline;
+    margin-bottom: 30px;
+  }
+  
+  .donate-button {
+    background-color: #ffd700;
+    color: #0056a6;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    align-self: center;
+  }
+  
+  .donate-button:hover {
+    background-color: #e6c200;
+  }
+  
+  .mission-image {
+    width: 45%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .mission-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .mission-text {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .mission-image {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .mission-title {
+      font-size: 2rem;
+    }
+  
+    .mission-content {
+      font-size: 1rem;
+    }
+  
+    .mission-highlight {
+      font-size: 1.5rem;
+    }
+  
+    .mission-donate {
+      font-size: 1.1rem;
+    }
+  
+    .donate-button {
+      font-size: 1.2rem;
+    }
+    
+  }
